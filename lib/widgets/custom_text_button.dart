@@ -12,13 +12,12 @@ class CustomTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      
       onPressed: onPressed,
       child: Container(
         height: 46,
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16), color: customGreen),
+            borderRadius: BorderRadius.circular(8), color: customGreen),
         child: Center(
           child: Text(
             text,

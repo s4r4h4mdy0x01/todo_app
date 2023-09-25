@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/const/color.dart';
-import 'package:todo_app/views/sign_up.dart';
+import 'package:todo_app/views/login.dart';
 import 'package:todo_app/widgets/custom_row_text.dart';
 import 'package:todo_app/widgets/custom_text_button.dart';
 import 'package:todo_app/widgets/custom_text_form_field.dart';
 import 'package:todo_app/widgets/text_is_sign.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
-  static String id = "LoginView";
+class SignUpView extends StatelessWidget {
+  const SignUpView({super.key});
+  static String id = 'SignUpView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,12 +37,12 @@ class LoginView extends StatelessWidget {
                   typeInput: TextInputType.visiblePassword),
               CustomRowText(
                 onpressed: () {
-                  Navigator.pushNamed(context, SignUpView.id);
+                  Navigator.pushNamed(context, LoginView.id);
                 },
-                text: 'Don\'t have an account',
-                textOfType: "Sign up",
+                text: 'already have an account',
+                textOfType: "Login",
               ),
-              const CustomTextButton(text: 'Login'),
+              const CustomTextButton(text: 'Sign Up'),
               TextIsSign(onpressed: () {}, textOfType: 'Forget Password?'),
             ],
           ),
